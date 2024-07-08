@@ -14,7 +14,7 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
-       <Route path='/' element={<HomePage/>} />
+       <Route path='/admin_home' element={<HomePage/>} />
        <Route path='/admin_login' element={<Admin_Login/>} />
        <Route path='/forgot_password' element={<Forgot_Password/>} />
        <Route path='/verify' element={<Verify/>} />

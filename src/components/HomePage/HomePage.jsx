@@ -8,6 +8,7 @@ import { HiMiniWallet } from "react-icons/hi2";
 import SimpleCard from '../Cards/SimpleCard';
 import HistoryCharts from '../Charts/HistoryCharts';
 import WaveCircle from '../WaveCircle/WaveCircle';
+import EarningsChart from '../Charts/EarningsChart';
 
 const HomePage = () => {
 
@@ -24,10 +25,10 @@ const HomePage = () => {
   }, []);
 
   return (
-    <Sidebar>
-      <Navbar />
-      <div className='p-3 xl:p-7 ml-[12%] md:ml-[8%] xl:ml-[5%]'>
-
+    // <Sidebar>
+    //   <Navbar />
+    //   <div className='p-3 xl:p-7 ml-[12%] md:ml-[8%] xl:ml-[5%]'>
+      <div>
         <div className='md:flex gap-2 md:gap-3 lg:gap-4 xl:gap-5'>
 
           <div className='w-full xl:w-[80%] flex flex-col gap-3 md:gap-4 lg:gap-5 xl:gap-7'>
@@ -62,12 +63,15 @@ const HomePage = () => {
                   </div>
                 )}
               </div>
-
-              <div className='w-full md:w-[44%]'>earnings</div>
+              
+              <div className='mt-3 xl:mt-0 flex gap-2 md:gap-3 xl:gap-4 xl:w-[44%]'>
+              <div className='w-1/2 xl:w-full '><EarningsChart/></div>
+              <div className='bg-red-900 xl:hidden w-1/2'>growth graph</div>
+              </div>
             </div>
           </div>
 
-          <div className='w-[20%] bg-red-900 '>growth graph</div>
+          <div className='w-[20%] bg-red-700 hidden xl:flex'>growth graph</div>
         </div>
 
         <div className='w-full xl:w-[80%]'>
@@ -78,9 +82,9 @@ const HomePage = () => {
             <HistoryCharts />
           </div>
         </div>
-
-      </div>
-    </Sidebar>
+        </div>
+    //   </div>
+    // </Sidebar>
   );
 };
 

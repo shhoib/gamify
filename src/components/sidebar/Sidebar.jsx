@@ -149,7 +149,7 @@ const Sidebar = ({children}) => {
   }
 
   return (
-    <div className='flex'>
+    // <div className='flex w-full'>
       
       <div className={`${ isClosed && 'w-[12%] md:w-[8%] xl:w-[5%]' } w-[40%] xl:w-[20%] bg-[#131a22] fixed z-40 h-screen top-0 left-0 flex flex-col items-center transition-all`} >
         <div className='flex gap-2 lg:gap-4 items-center justify-center relative py-5 md:py-7 lg:py-9 xl:py-11 w-full h-[10%] xl:h-[15%]'>
@@ -200,15 +200,15 @@ const Sidebar = ({children}) => {
           </div>
           </div>
 
-          <h2 className={`text-[#01ff86] text-xs md:text-sm lg:text-xl xl:text-lg py-2 md:py-3 lg:py-4 w-full cursor-pointer hover:bg-[#26466a] bg-[#1d2d3f] text-center h-[5%] xl:h-[7%] flex items-center justify-center ${isClosed && 'text-[3px] md:text-[6px] lg:text-[9px] xl:text-[9px]'}`}>GAMBLIFY</h2>
+          <h2 className={`text-[#01ff86] text-xs md:text-sm lg:text-xl xl:text-lg py-2 md:py-3 lg:py-4 w-full cursor-pointer hover:bg-[#26466a] bg-[#1d2d3f] text-center h-[5%] xl:h-[7%] flex items-center justify-center ${isClosed && 'text-[4px] md:text-[6px] lg:text-[9px] xl:text-[14px]'}`}>GAMBLIFY</h2>
        </div>
 
       </div>
 
-      <div className='w-full'>
-      {children}
-      </div>
-    </div>
+      // <div className='w-full'>
+      // {children}
+      // </div>
+    // </div>
   )
 }
 

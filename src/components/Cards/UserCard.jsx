@@ -7,7 +7,10 @@ const UserCard = ({color,heading,text,icon}) => {
         <h1 className='text-white text-[10px] md:text-sm xl:text-xl'>{heading}</h1>
         <h2 className='text-[5px] md:text-[10px] xl:text-sm'>{text}</h2>
     </div>
+    {
+      icon &&
     <div className='bg-[#242424] p-1 md:p-2 xl:p-3 rounded-md md:rounded-xl text-xs md:text-2xl xl:text-5xl' style={{color:color}}>{icon}</div>
+    }
     </div>
   )
 }

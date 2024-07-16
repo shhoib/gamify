@@ -30,7 +30,7 @@ const ResetPassword = () => {
     
     const {success,message} = await changePassword(password);
     if(!success) return setError(message)
-    navigate('/passswordChanged')
+    navigate('/passwordChanged')
   }
 
   return (

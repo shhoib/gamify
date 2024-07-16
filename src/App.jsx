@@ -10,6 +10,8 @@ import Sidebar from './components/sidebar/Sidebar';
 import Navbar from './components/Navbar/Navbar';
 import ManageUsers from './components/ManageUsers/ManageUsers';
 import UserDetails from './components/ManageUsers/UserDetails';
+import UserDeposit from './components/Deposits/UserDeposit';
+import DepositDetails from './components/Deposits/DepositDetails';
 
 
 const MainLayout = ({ children }) => (
@@ -37,6 +39,8 @@ function App() {
         <Route path="/admin_home" element={<MainLayout><HomePage /></MainLayout>} />
         <Route path="/admin_manageUsers" element={<MainLayout><ManageUsers /></MainLayout>} />
         <Route path="/admin_UserDetails/:userID" element={<MainLayout><UserDetails /></MainLayout>} />
+        <Route path="/admin_UserDeposits" element={<MainLayout><UserDeposit /></MainLayout>} />
+        <Route path="/admin_UserDeposits/:id" element={<MainLayout><DepositDetails /></MainLayout>} />
       </Routes>
     </BrowserRouter>
   );

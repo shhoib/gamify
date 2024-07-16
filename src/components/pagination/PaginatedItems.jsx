@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate';
-import { userData } from '../ManageUsers/userData';
-import UserPaginationMap from './UserPaginationMap';
+// import { userData } from '../ManageUsers/userData';
+// import UserPaginationMap from './UserPaginationMap';
 
-const PaginatedItems = ({itemsPerPage}) => {
+const PaginatedItems = ({itemsPerPage,userData,Component}) => {
     const [itemOffset, setItemOffset] = useState(0);
     const [userdata, setuserdata] = useState([])
 
@@ -13,7 +13,6 @@ const PaginatedItems = ({itemsPerPage}) => {
 
 
     const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     const currentItems = userdata.slice(itemOffset, endOffset);
     const pageCount = Math.ceil(userdata.length / itemsPerPage);
   
@@ -24,7 +23,7 @@ const PaginatedItems = ({itemsPerPage}) => {
   
     return (
       <>
-        <UserPaginationMap currentItems={currentItems} />
+        <Component currentItems={currentItems} />
         <ReactPaginate
           breakLabel="..."
           nextLabel=">"

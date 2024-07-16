@@ -2,18 +2,32 @@ import React from 'react'
 import { MdOutlineKeyboardArrowRight,MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SidebarMap = ({data,isclosed}) => {
 
   const [showDropdown, setshowDropdown] = useState(false);
+  const navigate = useNavigate();
 
   const handleShowDropdown =()=>{
     setshowDropdown(!showDropdown);
   }
 
+  const handleNavigate =()=>{
+    navigate(data.navigateTo)
+  }
+
+  const handleClick = () => {
+    if (data.hasDropdown) {
+      handleShowDropdown();
+    } else {
+      handleNavigate();
+    }
+  }
+
   return (
     <div className=''>
-    <div className='flex items-center justify-between text-[10px] md:text-sm lg:text-base xl:text-base px-3 md:px-4 lg:px-5 xl:px-6 py-2 md:py-3 hover:bg-[#1d2d3f] cursor-pointer rounded-xl hover:text-white mx-3 transition-all'  onClick={handleShowDropdown}>
+    <div className='flex items-center justify-between text-[10px] md:text-sm lg:text-base xl:text-base px-3 md:px-4 lg:px-5 xl:px-6 py-2 md:py-3 hover:bg-[#1d2d3f] cursor-pointer rounded-xl hover:text-white mx-3 transition-all'  onClick={handleClick}>
       <div className='flex items-center justify-center gap-2 md:gap-3 xl:gap-4'>
         <div>{data.icon}</div>
         {

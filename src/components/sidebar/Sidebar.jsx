@@ -23,62 +23,71 @@ const sidebarData = [
     id : 1,
     icon : <TbAppsFilled/>,
     text : 'Dashboard',
-    hasDropdown : false
+    hasDropdown : false,
+    navigateTo : '/admin_home'
   },
   {
     id : 2,
     icon : <FiLink/>,
     text : 'Referrals',
-    hasDropdown : false
+    hasDropdown : false,
+    navigateTo : ''
   },
   {
     id : 3,
     icon : <RiUserSettingsFill/>,
     text : 'Manage Users',
-    hasDropdown : true,
-    dropdownData : ['data1','data2']
+    hasDropdown : false,
+    // dropdownData : ['data1','data2'],
+    navigateTo : '/admin_manageUsers'
   },
   {
     id : 4,
     icon : <IoWallet/>,
     text : 'Gateways',
     hasDropdown : true,
-    dropdownData : ['data1','data2']
+    dropdownData : ['data1','data2'],
+    navigateTo : ''
   },
   {
     id : 5,
     icon : <GiWallet/>,
     text : 'Deposits',
-    hasDropdown : true,
-    dropdownData : ['data1','data2']
+    hasDropdown : false,
+    // dropdownData : ['data1','data2'],
+    navigateTo : ''
   },
   {
     id : 6,
     icon : <HiMiniWallet/>,
     text : 'Withdrawals',
     hasDropdown : true,
-    dropdownData : ['data1','data2']
+    dropdownData : ['data1','data2'],
+    navigateTo : ''
   },
   {
     id : 7,
     icon : <PiGameControllerFill/>,
     text : 'Games',
     hasDropdown : true,
-    dropdownData : ['data1','data2']
+    dropdownData : ['data1','data2'],
+    navigateTo : ''
   },
   {
     id : 8,
     icon : <RiCustomerService2Fill/>,
     text : 'Support tickets',
     hasDropdown : true,
-    dropdownData : ['data1','data2']
+    dropdownData : ['data1','data2'],
+    navigateTo : ''
   },
   {
     id : 9,
     icon : <TbReportSearch/>,
     text : 'Reports',
     hasDropdown : true,
-    dropdownData : ['data1','data2']
+    dropdownData : ['data1','data2'],
+    navigateTo : ''
   },
 ]
 const settingsData = [
